@@ -41,7 +41,7 @@ from collections import defaultdict
 #                     CONFIG
 # ═══════════════════════════════════════════════════
 
-BOT_TOKEN = "MTUxMjE0MTEyNDMxNDA3NTIxNg.GHxOFX.jn7Qutj7DY60H2OFhbOIpgCd1Cwh1bqTFrWbEY"          # Token du bot (Discord Developer Portal)
+BOT_TOKEN = "Your Code"          # Token du bot (Discord Developer Portal)
 PREFIX = "!"                          # Préfixe des commandes
 DATA_FILE = "bot_data.json"           # Fichier de sauvegarde des données
 
