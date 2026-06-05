@@ -1064,7 +1064,7 @@ class _ModalTriggerView(discord.ui.View):
 # ═══════════════════════════════════════════════════
 
 if __name__ == "__main__":
-    if BOT_TOKEN == "TON_TOKEN_ICI":
+    if not BOT_TOKEN:
         print("⚠️  ATTENTION : Tu n'as pas renseigné ton token !")
         print("   Ouvre bot.py et remplace TON_TOKEN_ICI par ton vrai token Discord.")
     else:
