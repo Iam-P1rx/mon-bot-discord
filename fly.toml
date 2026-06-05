@@ -7,13 +7,14 @@ builder = "paketobuildpacks/builder:base"
 [env]
 PORT = "8080"
 
-[http_service]
-auto_start_machines = true
-auto_stop_machines = false
-force_https = true
-internal_port = 8080
-min_machines_running = 1
-processes = ["app"]
+[[services]]
+  internal_port = 8080
+  protocol = "tcp"
+
+  [[services.tcp_checks]]
+    interval = "15s"
+    timeout = "2s"
+
 
 [[vm]]
 cpu_kind = "shared"
