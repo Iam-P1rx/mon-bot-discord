@@ -55,7 +55,7 @@ threading.Thread(target=lambda: HTTPServer(('', 8080), H).serve_forever(), daemo
 #                     CONFIG
 # ═══════════════════════════════════════════════════
 
-BOT_TOKEN = "Your Code"          # Token du bot (Discord Developer Portal)
+BOT_TOKEN = os.getenv("DISCORD_TOKEN")          # Token du bot (Discord Developer Portal)
 PREFIX = "!"                          # Préfixe des commandes
 DATA_FILE = "bot_data.json"           # Fichier de sauvegarde des données
 
