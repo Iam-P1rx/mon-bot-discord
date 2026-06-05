@@ -1065,8 +1065,8 @@ class _ModalTriggerView(discord.ui.View):
 
 if __name__ == "__main__":
     if not BOT_TOKEN:
-    print("ERREUR: DISCORD_TOKEN manquant!")
-    exit(1)
-
+        print("ERREUR: DISCORD_TOKEN manquant!")
+        exit(1)
     else:
         bot.run(BOT_TOKEN)
+
