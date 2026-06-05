@@ -37,6 +37,20 @@ import random
 import string
 from collections import defaultdict
 
+from http.server import HTTPServer, BaseHTTPRequestHandler
+import threading
+
+class H(BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.end_headers()
+        self.wfile.write(b'OK')
+    def log_message(self, *args):
+        pass
+
+threading.Thread(target=lambda: HTTPServer(('', 8080), H).serve_forever(), daemon=True).start()
+
+
 # ═══════════════════════════════════════════════════
 #                     CONFIG
 # ═══════════════════════════════════════════════════
