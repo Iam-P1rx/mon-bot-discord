@@ -31,7 +31,10 @@ from discord.ext import commands, tasks
 from discord import app_commands
 import asyncio
 import json
-import os
+import os 
+import signal
+signal.signal(signal.SIGINT, signal.SIG_IGN)
+signal.signal(signal.SIGTERM, signal.SIG_IGN)
 import datetime
 import random
 import string
