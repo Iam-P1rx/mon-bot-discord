@@ -10,11 +10,12 @@ PORT = "8080"
 [[services]]
   internal_port = 8080
   protocol = "tcp"
+  auto_stop_machines = false
+  min_machines_running = 1
 
   [[services.tcp_checks]]
     interval = "15s"
     timeout = "2s"
-
 
 [[vm]]
 cpu_kind = "shared"
